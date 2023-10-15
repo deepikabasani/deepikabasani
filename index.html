@@ -9,39 +9,41 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #B3E0FF; /* Light blue background */
-            color: black; /* Black text color */
+            background: linear-gradient(to bottom, #B3E0FF, white); /* Background gradient from light blue to white */
+            color: black;
         }
 
         h1, h2 {
-            color: black; /* Black heading and text color */
+            color: black;
+            display: flex; /* Flex display to position the arrow */
+            justify-content: space-between; /* Position the arrow at the right side of the heading */
+        }
+
+        .arrow::before {
+            content: '\25BC'; /* Unicode for a down arrow */
+            margin-left: 10px; /* Adjust the margin as needed */
         }
 
         /* Initially, hide the sections with class "content" */
         .content {
             display: none;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             margin: 20px;
             border-radius: 5px;
-        }
-
-        /* Style the headings as links */
-        h2 {
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 onclick="toggleContent('intro')">Mary Deepika Basani</h1>
+        <h1 class="arrow" onclick="toggleContent('intro')">Mary Deepika Basani</h1>
         <div class="content" id="intro">
             <p>I am a highly driven and accomplished Computer Science graduate who is now pursuing a Master of Science in Applied Computer Science at Grand Valley State University. With a strong background in computer science and a passion for technology, I have acquired a varied range of talents and experiences that I am delighted to display in this portfolio.</p>
         </div>
     </header>
 
     <!-- Contact Information -->
-    <h2 onclick="toggleContent('contact')">Contact Information</h2>
+    <h2 class="arrow" onclick="toggleContent('contact')">Contact Information</h2>
     <div class="content" id="contact">
         <ul>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/marydeepika-basani-820b7127b/">LinkedIn Profile</a></li>
@@ -49,7 +51,7 @@
     </div>
 
     <!-- Professional Experience -->
-    <h2 onclick="toggleContent('experience')">Professional Experience</h2>
+    <h2 class="arrow" onclick="toggleContent('experience')">Professional Experience</h2>
     <div class="content" id="experience">
         <p><strong>IT Student Technician</strong><br>
         <em>Grand Valley State University</em><br>
@@ -57,7 +59,7 @@
     </div>
 
     <!-- Interests -->
-    <h2 onclick="toggleContent('interests')">Interests</h2>
+    <h2 class="arrow" onclick="toggleContent('interests')">Interests</h2>
     <div class="content" id="interests">
         <ul>
             <li>Reading Novels</li>
@@ -67,7 +69,7 @@
     </div>
 
     <!-- Education -->
-    <h2 onclick="toggleContent('education')">Education</h2>
+    <h2 class="arrow" onclick="toggleContent('education')">Education</h2>
     <div class="content" id="education">
         <ul>
             <li><strong>Master's in Applied Computer Science</strong><br>
@@ -81,7 +83,7 @@
     </div>
 
     <!-- Projects -->
-    <h2 onclick="toggleContent('projects')">Projects</h2>
+    <h2 class="arrow" onclick="toggleContent('projects')">Projects</h2>
     <div class="content" id="projects">
         <p><strong>Approach to Detecting Phishing Attacks</strong><br>
         - Developed a phishing detection system to protect consumers from cyber-attacks during online transactions.<br>
@@ -100,7 +102,7 @@
     </div>
 
     <!-- Certifications -->
-    <h2 onclick="toggleContent('certifications')">Certifications</h2>
+    <h2 class="arrow" onclick="toggleContent('certifications')">Certifications</h2>
     <div class="content" id="certifications">
         <ul>
             <li>Analysing and Visualizing Data the Google Way</li>
@@ -111,7 +113,7 @@
     </div>
 
     <!-- Technical Expertise -->
-    <h2 onclick="toggleContent('skills')">Technical Expertise</h2>
+    <h2 class="arrow" onclick="toggleContent('skills')">Technical Expertise</h2>
     <div class="content" id="skills">
         <ul>
             <li>Microsoft Excel</li>
