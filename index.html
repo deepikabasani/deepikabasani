@@ -26,44 +26,48 @@
             border-radius: 5px;
         }
 
-        /* Style the headings as links */
+        /* Style the headings as links with drop-down symbols */
         h2 {
             cursor: pointer;
         }
 
-        .arrow::before {
+        h2::before {
             content: "\25BC"; /* Unicode for down arrow */
-            margin-left: 10px;
+            position: absolute;
+            left: -25px;
+        }
+
+        .expanded::before {
+            content: "\25B2"; /* Unicode for up arrow */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mary Deepika Basani<span class="arrow" onclick="toggleContent('intro')"></span></h1>
-        <div class="content" id="intro">
+        <h1>Mary Deepika Basani</h1>
+        <div class="content" id="intro" style="display: block;"> <!-- Ensure this line includes style="display: block;" -->
             <p>I am a highly driven and accomplished Computer Science graduate who is now pursuing a Master of Science in Applied Computer Science at Grand Valley State University. With a strong background in computer science and a passion for technology, I have acquired a varied range of talents and experiences that I am delighted to display in this portfolio.</p>
         </div>
     </header>
 
-    <!-- Contact Information -->
-    <h2 class="arrow" onclick="toggleContent('contact')">Contact Information</h2>
+
+    <!-- Main Headings with Drop-Down Symbols -->
+    <h2 class="expanded" onclick="toggleContent('contact')">Contact Information</h2>
     <div class="content" id="contact">
         <ul>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/marydeepika-basani-820b7127b/">LinkedIn Profile</a></li>
         </ul>
     </div>
 
-    <!-- Professional Experience -->
-    <h2 class="arrow" onclick="toggleContent('experience')">Professional Experience</h2>
+    <h2 class="expanded" onclick="toggleContent('experience')">Professional Experience</h2>
     <div class="content" id="experience">
         <p><strong>IT Student Technician</strong><br>
         <em>Grand Valley State University</em><br>
         As an IT Student Technician at GVSU, I have provided essential support for various technology-related needs. This includes assisting with IT Service Desk inquiries, offering walk-up support, handling emails, calls, and addressing other technology-related requests. This role has allowed me to develop strong problem-solving and customer service skills in a real-world IT environment.</p>
     </div>
 
-    <!-- Interests -->
-    <h2 class="arrow" onclick="toggleContent('interests')">Interests</h2>
-    <div class "content" id="interests">
+    <h2 class="expanded" onclick="toggleContent('interests')">Interests</h2>
+    <div class="content" id="interests">
         <ul>
             <li>Reading Novels</li>
             <li>Cooking</li>
@@ -71,8 +75,7 @@
         </ul>
     </div>
 
-    <!-- Education -->
-    <h2 class="arrow" onclick="toggleContent('education')">Education</h2>
+    <h2 class="expanded" onclick="toggleContent('education')">Education</h2>
     <div class="content" id="education">
         <ul>
             <li><strong>Master's in Applied Computer Science</strong><br>
@@ -85,8 +88,7 @@
         </ul>
     </div>
 
-    <!-- Projects -->
-    <h2 class="arrow" onclick="toggleContent('projects')">Projects</h2>
+    <h2 class="expanded" onclick="toggleContent('projects')">Projects</h2>
     <div class="content" id="projects">
         <p><strong>Approach to Detecting Phishing Attacks</strong><br>
         - Developed a phishing detection system to protect consumers from cyber-attacks during online transactions.<br>
@@ -104,8 +106,7 @@
         - Utilized Arduino and IoT to create the system and implemented the final product.</p>
     </div>
 
-    <!-- Certifications -->
-    <h2 class="arrow" onclick="toggleContent('certifications')">Certifications</h2>
+    <h2 class="expanded" onclick="toggleContent('certifications')">Certifications</h2>
     <div class="content" id="certifications">
         <ul>
             <li>Analysing and Visualizing Data the Google Way</li>
@@ -115,8 +116,7 @@
         </ul>
     </div>
 
-    <!-- Technical Expertise -->
-    <h2 class="arrow" onclick="toggleContent('skills')">Technical Expertise</h2>
+    <h2 class="expanded" onclick="toggleContent('skills')">Technical Expertise</h2>
     <div class="content" id="skills">
         <ul>
             <li>Microsoft Excel</li>
@@ -135,8 +135,10 @@
             const content = document.getElementById(id);
             if (content.style.display === 'block') {
                 content.style.display = 'none';
+                document.querySelector("h2[onclick='toggleContent(\"" + id + '\")"]').classList.remove("expanded");
             } else {
                 content.style.display = 'block';
+                document.querySelector("h2[onclick='toggleContent(\"" + id + '\")"]').classList.add("expanded");
             }
         }
     </script>
