@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mary Deepika Basani - Portfolio</title>
     <style>
-        /* Background color to light blue */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,7 +13,6 @@
             color: black; /* Black text color */
         }
 
-        /* Style the headings as white with black text */
         h1, h2 {
             color: white; /* White heading color */
         }
@@ -36,12 +34,18 @@
     </style>
 </head>
 <body>
-    <!-- Your HTML content here -->
-
     <header>
         <h1>Mary Deepika Basani</h1>
-        <p>Your introduction text here...</p>
+        <p>I am a highly driven and accomplished Computer Science graduate who is now pursuing a Master of Science in Applied Computer Science at Grand Valley State University. With a strong background in computer science and a passion for technology, I have acquired a varied range of talents and experiences that I am delighted to display in this portfolio.</p>
     </header>
+
+    <!-- Contact Information -->
+    <h2 onclick="toggleContent('contact')">Contact Information</h2>
+    <div class="content" id="contact">
+        <ul>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/marydeepika-basani-820b7127b/">LinkedIn Profile</a></li>
+        </ul>
+    </div>
 
     <!-- Professional Experience -->
     <h2 onclick="toggleContent('experience')">Professional Experience</h2>
@@ -62,7 +66,7 @@
     </div>
 
     <!-- Education -->
-    <h2 onclick="toggleContent('education')">Education</h2>
+    <h2 onclick("toggleContent('education')">Education</h2>
     <div class="content" id="education">
         <ul>
             <li><strong>Master's in Applied Computer Science</strong><br>
@@ -75,7 +79,49 @@
         </ul>
     </div>
 
-    <!-- Add more sections as needed -->
+    <!-- Projects -->
+    <h2 onclick("toggleContent('projects')">Projects</h2>
+    <div class="content" id="projects">
+        <p><strong>Approach to Detecting Phishing Attacks</strong><br>
+        - Developed a phishing detection system to protect consumers from cyber-attacks during online transactions.<br>
+        - Conducted research on existing phishing detection methods and identified the limitations of each method.<br>
+        - Tested the system using a dataset of phishing websites and achieved an accuracy of 90%.</p>
+
+        <p><strong>Who Wants to Be a Millionaire?</strong><br>
+        - Developed a virtual version of the game show "Who Wants to Be a Millionaire?" with user-defined functions to enhance player engagement.<br>
+        - Wrote user-defined functions using python to help the player interact with the game.<br>
+        - Resulted in an engaging and interactive game that can be played by a single player.</p>
+
+        <p><strong>Gas Leakage Detection System</strong><br>
+        - Created a gas leakage detection system using IoT to detect harmful gases in the environment and alert people to evacuate the area.<br>
+        - Connected hardware parts with software and wrote the sketch to function accordingly.<br>
+        - Utilized Arduino and IoT to create the system and implemented the final product.</p>
+    </div>
+
+    <!-- Certifications -->
+    <h2 onclick="toggleContent('certifications')">Certifications</h2>
+    <div class="content" id="certifications">
+        <ul>
+            <li>Analysing and Visualizing Data the Google Way</li>
+            <li>Data Visualization at University of Illinois</li>
+            <li>Certified in Python at University of Michigan</li>
+            <li>Certified in HTML at University of Michigan</li>
+        </ul>
+    </div>
+
+    <!-- Skills -->
+    <h2 onclick="toggleContent('skills')">Technical Expertise</h2>
+    <div class="content" id="skills">
+        <ul>
+            <li>Microsoft Excel</li>
+            <li>C Language</li>
+            <li>Python</li>
+            <li>MySQL</li>
+            <li>Data Visualization</li>
+            <li>HTML and CSS</li>
+            <!-- Add more technical skills as needed -->
+        </ul>
+    </div>
 
     <script>
         // JavaScript function to toggle content visibility
@@ -88,5 +134,3 @@
             }
         }
     </script>
-</body>
-</html>
