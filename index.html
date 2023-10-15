@@ -29,27 +29,24 @@
         /* Style the headings as links */
         h2 {
             cursor: pointer;
-            position: relative;
-            padding-left: 20px;
         }
 
         .arrow::before {
             content: "\25BC"; /* Unicode for down arrow */
-            position: absolute;
-            left: 0;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mary Deepika Basani</h1>
+        <h1>Mary Deepika Basani<span class="arrow" onclick="toggleContent('intro')"></span></h1>
         <div class="content" id="intro">
             <p>I am a highly driven and accomplished Computer Science graduate who is now pursuing a Master of Science in Applied Computer Science at Grand Valley State University. With a strong background in computer science and a passion for technology, I have acquired a varied range of talents and experiences that I am delighted to display in this portfolio.</p>
         </div>
     </header>
 
     <!-- Contact Information -->
-    <h2 onclick="toggleContent('contact')" class="arrow">Contact Information</h2>
+    <h2 class="arrow" onclick="toggleContent('contact')">Contact Information</h2>
     <div class="content" id="contact">
         <ul>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/marydeepika-basani-820b7127b/">LinkedIn Profile</a></li>
@@ -57,7 +54,7 @@
     </div>
 
     <!-- Professional Experience -->
-    <h2 onclick="toggleContent('experience')" class="arrow">Professional Experience</h2>
+    <h2 class="arrow" onclick="toggleContent('experience')">Professional Experience</h2>
     <div class="content" id="experience">
         <p><strong>IT Student Technician</strong><br>
         <em>Grand Valley State University</em><br>
@@ -65,8 +62,8 @@
     </div>
 
     <!-- Interests -->
-    <h2 onclick="toggleContent('interests')" class="arrow">Interests</h2>
-    <div class="content" id="interests">
+    <h2 class="arrow" onclick="toggleContent('interests')">Interests</h2>
+    <div class "content" id="interests">
         <ul>
             <li>Reading Novels</li>
             <li>Cooking</li>
@@ -75,7 +72,7 @@
     </div>
 
     <!-- Education -->
-    <h2 onclick="toggleContent('education')" class="arrow">Education</h2>
+    <h2 class="arrow" onclick="toggleContent('education')">Education</h2>
     <div class="content" id="education">
         <ul>
             <li><strong>Master's in Applied Computer Science</strong><br>
@@ -89,7 +86,7 @@
     </div>
 
     <!-- Projects -->
-    <h2 onclick="toggleContent('projects')" class="arrow">Projects</h2>
+    <h2 class="arrow" onclick="toggleContent('projects')">Projects</h2>
     <div class="content" id="projects">
         <p><strong>Approach to Detecting Phishing Attacks</strong><br>
         - Developed a phishing detection system to protect consumers from cyber-attacks during online transactions.<br>
@@ -108,7 +105,7 @@
     </div>
 
     <!-- Certifications -->
-    <h2 onclick="toggleContent('certifications')" class="arrow">Certifications</h2>
+    <h2 class="arrow" onclick="toggleContent('certifications')">Certifications</h2>
     <div class="content" id="certifications">
         <ul>
             <li>Analysing and Visualizing Data the Google Way</li>
@@ -119,7 +116,7 @@
     </div>
 
     <!-- Technical Expertise -->
-    <h2 onclick="toggleContent('skills')" class="arrow">Technical Expertise</h2>
+    <h2 class="arrow" onclick="toggleContent('skills')">Technical Expertise</h2>
     <div class="content" id="skills">
         <ul>
             <li>Microsoft Excel</li>
